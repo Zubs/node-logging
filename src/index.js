@@ -8,9 +8,21 @@ let request;
 const app = express();
 
 const consoleTransport = new winston.transports.Console();
+const fileTransport = new winston.transports.File({
+    level: 'info',
+    filename: './logs/info.log',
+    handleExceptions: true,
+    json: true,
+    maxsize: 5242880,
+    maxFiles: 5,
+    colorize: false
+});
 
 const myWinstonOptions = {
-    transports: [consoleTransport],
+    transports: [
+        consoleTransport,
+        fileTransport
+    ],
     format: combine(
         timestamp(),
         printf(info => {
