@@ -1,0 +1,26 @@
+{
+  "name": "node-logging-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zubs/node-logging.git"
+  },
+  "author": "Zubs <zubairidrisaweda@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zubs/node-logging/issues"
+  },
+  "homepage": "https://github.com/Zubs/node-logging#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "winston": "^3.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
